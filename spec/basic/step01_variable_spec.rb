@@ -66,4 +66,58 @@ describe 'Step01VariableTest' do
       magiclamp = 'burn'
     end
   end
+
+  context 'method argument' do
+    # Same as the previous method question. (前のメソッドの質問と同じ)
+    it 'immutable method-call' do
+      sea = "harbor";
+      land = 415;
+      help_method_argument_immutable_methodcall(sea, land);
+      log(sea); # your answer? => 
+    end
+
+    def help_method_argument_immutable_methodcall(sea, land)
+      land += 1
+      sea + land.to_s
+    end
+
+    # Same as the previous method question. (前のメソッドの質問と同じ)
+    it 'mutable method-call' do
+      sea = "harbor";
+      land = 415;
+      help_method_argument_mutable_methodcall(sea, land);
+      log(sea); # your answer? => 
+    end
+
+    def help_method_argument_mutable_methodcall(sea, land)
+      land += 1
+      sea << land.to_s
+    end
+  end
+
+  context 'challenge' do
+    # Define variables as followings:
+    # o local variable named sea typed String, initial value is "mystic"
+    # o local variable named land typed Integer, initial value is null
+    # o instance variable named piari typed int, without initial value
+    # o show all variables by log() as comma-separated
+    #
+    # (変数を以下のように定義しましょう):
+    # o ローカル変数、名前はsea, 型はString, 初期値は "mystic"
+    # o ローカル変数、名前はland, 型はInteger, 初期値は null
+    # o インスタンス変数、名前はpiari, 型はint, 初期値なし
+    # o すべての変数をlog()でカンマ区切りの文字列で表示
+    it 'variable writing' do
+    end
+
+    # Make your original exercise as question style about variable. <br>
+    # (変数についてあなたのオリジナルの質問形式のエクササイズを作ってみましょう)
+    #
+    # _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+    # your question here (ここにあなたの質問を):
+    # 
+    # _/_/_/_/_/_/_/_/_/_/
+    it 'test variable your exercise' do
+    end
+  end
 end

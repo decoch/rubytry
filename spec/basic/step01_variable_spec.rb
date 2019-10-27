@@ -105,7 +105,7 @@ describe 'Step01VariableTest' do
     # (変数を以下のように定義しましょう):
     # o ローカル変数、名前はsea, 型はString, 初期値は "mystic"
     # o ローカル変数、名前はland, 型はInteger, 初期値は null
-    # o インスタンス変数、名前はpiari, 型はint, 初期値なし
+    # o インスタンス変数、名前はpiari, 型はInteger, 初期値なし
     # o すべての変数をlog()でカンマ区切りの文字列で表示
     it 'variable writing' do
     end

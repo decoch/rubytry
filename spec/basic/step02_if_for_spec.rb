@@ -56,10 +56,59 @@ describe 'Step02IfForSpec' do
       else
         sea = 9
       end
-      if land
-        sea = 10
+      sea = 10 if land
+      log(sea) # your answer? =>
+    end
+  end
+
+  let (:stage_array) { ['broadway', 'dockside', 'hangar', 'magiclamp'] }
+  context 'for statement' do
+    # Same as the previous method question. (前のメソッドの質問と同じ)
+    it 'spec for inti basic' do
+      sea = nil
+      for i in (0...stage_array.size)
+        stage = stage_array[i]
+        if i == 1
+          sea = stage
+        end
       end
       log(sea) # your answer? =>
+    end
+
+    # Same as the previous method question. (前のメソッドの質問と同じ)
+    it 'spec for basic' do
+      sea = nil
+      for stage in stage_array do
+        sea = stage
+      end
+      log(sea) # your answer? =>
+    end
+
+    # Same as the previous method question. (前のメソッドの質問と同じ)
+    it 'spec for next break' do
+      sea = nil
+      for stage in stage_array do
+        if stage.start_with?('br')
+          next
+        end
+        sea = stage
+        break if stage.include?('ga')
+      end
+      log(sea) # your answer? =>
+    end
+
+    # Same as the previous method question. (前のメソッドの質問と同じ)
+    it 'spec each basic' do
+      str = ''
+      stage_array.each do |stage|
+        if str.length > 0
+          next
+        end
+        if stage.include?('i')
+          str << stage
+        end
+      end
+      log(str) # your answer? =>
     end
   end
 end
